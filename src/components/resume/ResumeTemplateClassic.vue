@@ -50,7 +50,7 @@ const cleanBullets = (bullets: string[]) => bullets.filter((bullet) => bullet.tr
       </article>
     </section>
 
-    <section class="resume-section">
+    <section v-if="resume.projects.length > 0" class="resume-section">
       <h2>Projects</h2>
       <article v-for="item in resume.projects" :key="item.id" class="resume-item">
         <div class="resume-item-head">
@@ -66,7 +66,7 @@ const cleanBullets = (bullets: string[]) => bullets.filter((bullet) => bullet.tr
       </article>
     </section>
 
-    <section class="resume-section">
+    <section v-if="resume.education.length > 0" class="resume-section">
       <h2>Education</h2>
       <article v-for="item in resume.education" :key="item.id" class="resume-item">
         <div class="resume-item-head">

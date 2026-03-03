@@ -18,7 +18,6 @@ const addEducation = () => {
 }
 
 const removeEducation = (id: string) => {
-  if (props.education.length === 1) return
   const index = props.education.findIndex((item) => item.id === id)
   if (index >= 0) props.education.splice(index, 1)
 }
@@ -36,6 +35,8 @@ const removeHighlight = (item: EducationItem, index: number) => {
       <h3>Education</h3>
       <button class="btn btn-muted" type="button" @click="addEducation">+ Add education</button>
     </div>
+
+    <p v-if="education.length === 0" class="inline-note">No education entries added.</p>
 
     <div v-for="(item, index) in education" :key="item.id" class="item-card">
       <div class="item-card-header">

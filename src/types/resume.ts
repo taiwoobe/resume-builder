@@ -81,28 +81,8 @@ export const createEmptyResume = (): ResumeData => ({
       highlights: [''],
     },
   ],
-  projects: [
-    {
-      id: createId(),
-      name: '',
-      subtitle: '',
-      link: '',
-      startDate: '',
-      endDate: '',
-      highlights: [''],
-    },
-  ],
-  education: [
-    {
-      id: createId(),
-      school: '',
-      degree: '',
-      location: '',
-      startDate: '',
-      endDate: '',
-      highlights: [''],
-    },
-  ],
+  projects: [],
+  education: [],
   skills: [
     {
       id: createId(),

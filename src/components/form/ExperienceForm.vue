@@ -74,7 +74,7 @@ const removeHighlight = (item: ExperienceItem, index: number) => {
         </div>
       </div>
 
-      <p class="inline-note" style="margin: 10px 0">Impact bullets</p>
+      <p class="inline-note" style="margin: 10px 0">Key Achievements</p>
       <div v-for="(_, bulletIndex) in item.highlights" :key="`${item.id}-${bulletIndex}`" class="bullet-row">
         <input v-model="item.highlights[bulletIndex]" placeholder="Built feature X that improved Y by Z%" />
         <button class="btn btn-muted" type="button" @click="removeHighlight(item, bulletIndex)">-</button>
