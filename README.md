@@ -13,7 +13,6 @@ Users fill in a structured form (personal info, experience, projects, education,
 - Collects resume data through an easy section-based form.
 - Supports dynamic add/remove for roles, projects, education entries, and bullet points.
 - Generates a polished PDF resume from the form data in one click.
-- Saves draft progress locally in the browser (`localStorage`) so users can continue later.
 - Uses a single clean resume template aligned with the provided design style.
 
 ## Tech stack

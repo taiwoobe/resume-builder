@@ -8,27 +8,20 @@ import PersonalInfoForm from './components/form/PersonalInfoForm.vue'
 import ProjectsForm from './components/form/ProjectsForm.vue'
 import SkillsForm from './components/form/SkillsForm.vue'
 import ResumeTemplateClassic from './components/resume/ResumeTemplateClassic.vue'
-import { clearResumeDraft, loadResumeDraft, useResumeDraft } from './composables/useResumeDraft'
 import { exportElementToPdf } from './services/pdfExport'
-import { createDefaultResume, type ResumeData } from './types/resume'
+import { createEmptyResume, type ResumeData } from './types/resume'
 
-const createFreshResume = () => createDefaultResume()
-
-const resume = ref<ResumeData>(loadResumeDraft() ?? createFreshResume())
+const resume = ref<ResumeData>(createEmptyResume())
 const previewRef = ref<HTMLElement | null>(null)
 const isExporting = ref(false)
+const formResetKey = ref(0)
 
-useResumeDraft(resume)
-
-const validationErrors = computed(() => {
-  const errors: string[] = []
-  if (!resume.value.personal.fullName.trim()) errors.push('Full name is required.')
-  if (!resume.value.personal.email.trim()) errors.push('Email is required.')
-  if (!resume.value.personal.summary.trim()) errors.push('Professional summary is required.')
-  return errors
-})
-
-const hasValidationErrors = computed(() => validationErrors.value.length > 0)
+const hasValidationErrors = computed(
+  () =>
+    !resume.value.personal.fullName.trim() ||
+    !resume.value.personal.email.trim() ||
+    !resume.value.personal.summary.trim(),
+)
 
 const sanitizeFileName = (name: string) =>
   (name || 'resume')
@@ -54,8 +47,8 @@ const generatePdf = async () => {
 }
 
 const resetResume = () => {
-  resume.value = createFreshResume()
-  clearResumeDraft()
+  resume.value = createEmptyResume()
+  formResetKey.value += 1
 }
 </script>
 
@@ -86,11 +79,7 @@ const resetResume = () => {
         </div>
       </header>
 
-      <div v-if="hasValidationErrors" class="error-banner">
-        {{ validationErrors[0] }}
-      </div>
-
-      <section>
+      <section :key="formResetKey">
         <PersonalInfoForm :personal="resume.personal" />
         <ExperienceForm :experience="resume.experience" />
         <ProjectsForm :projects="resume.projects" />
