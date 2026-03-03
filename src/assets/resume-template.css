@@ -1,0 +1,137 @@
+.resume-page {
+  width: 794px;
+  min-height: 1123px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #1f2937;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.12);
+  padding: 42px 46px;
+}
+
+.resume-header {
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.resume-name {
+  font-size: 2.3rem;
+  line-height: 1.1;
+  font-weight: 500;
+  margin: 0 0 9px;
+  color: #111827;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.86rem;
+  color: #4b5563;
+}
+
+.resume-summary {
+  font-size: 0.95rem;
+  color: #374151;
+  margin: 0 0 14px;
+}
+
+.resume-section {
+  margin: 0 0 18px;
+}
+
+.resume-section h2 {
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.resume-item {
+  margin-bottom: 12px;
+}
+
+.resume-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.resume-item-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.resume-item-subtitle {
+  margin: 2px 0 0;
+  font-size: 1rem;
+  font-style: italic;
+  color: #374151;
+}
+
+.resume-item-time {
+  font-size: 0.92rem;
+  white-space: nowrap;
+  color: #374151;
+  text-align: right;
+}
+
+.resume-bullets {
+  margin: 7px 0 0 0;
+  padding-left: 17px;
+  color: #374151;
+  font-size: 0.93rem;
+}
+
+.resume-bullets li {
+  margin-bottom: 3px;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 5px;
+}
+
+.skills-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.skills-row strong {
+  font-size: 1rem;
+}
+
+.skills-row span {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+@media (max-width: 1400px) {
+  .resume-page {
+    width: 100%;
+    min-height: auto;
+    padding: 26px;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff;
+  }
+
+  .resume-page {
+    width: 210mm;
+    min-height: 297mm;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 15mm;
+  }
+}

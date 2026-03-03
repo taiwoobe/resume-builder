@@ -1,0 +1,22 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(280 220) rotate(45) scale(360 360)">
+      <stop stop-color="#60A5FA" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(940 1040) rotate(45) scale(420 420)">
+      <stop stop-color="#A78BFA" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1600" fill="#0B1220"/>
+  <rect x="-40" y="500" width="1280" height="2" fill="#334155" fill-opacity="0.35"/>
+  <rect x="-40" y="940" width="1280" height="2" fill="#334155" fill-opacity="0.35"/>
+  <circle cx="280" cy="220" r="360" fill="url(#glowA)"/>
+  <circle cx="940" cy="1040" r="420" fill="url(#glowB)"/>
+  <g opacity="0.18" stroke="#93C5FD">
+    <path d="M-40 140 C200 80 380 200 620 140 C860 80 1020 200 1240 140"/>
+    <path d="M-40 260 C200 200 380 320 620 260 C860 200 1020 320 1240 260"/>
+    <path d="M-40 380 C200 320 380 440 620 380 C860 320 1020 440 1240 380"/>
+  </g>
+</svg>
