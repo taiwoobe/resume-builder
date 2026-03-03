@@ -12,7 +12,7 @@
     </div>
 
     <p class="info-footer">
-      Built with love
+      Built with
       <svg
         width="14"
         height="14"
